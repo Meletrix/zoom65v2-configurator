@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { RouterView } from "vue-router";
+document.oncontextmenu = function () {
+  return false;
+};
 </script>
 
 <template>
