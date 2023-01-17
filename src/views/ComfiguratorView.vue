@@ -227,10 +227,13 @@ Img.weight = "https://i.imgur.com/8Vw2qU8.png";
 Img.backplate = "https://i.imgur.com/Nlta3f6.png";
 
 const update_case = () => {
+  console.log(case_color.value);
   Img.case = dict[case_color.value];
   Img.backplate = dict[default_dict[case_color.value]["backplate"]];
   Img.weight = dict[default_dict[case_color.value]["weight"]];
   Img.knob = dict[default_dict[case_color.value]["knob"]];
+
+  console.log(Img.case);
 };
 const update_backplate = () => {
   console.log(backplate_color.value);
@@ -262,11 +265,15 @@ const case_color_options = [
     label: "Blush Pink",
   },
   {
+    value: "Case_CoolGrey",
+    label: "Cool Grey",
+  },
+  {
     value: "Case_CyberYellow",
     label: "Cyber Yellow",
   },
   {
-    value: "FaintBlurple",
+    value: "Case_FaintBlurple",
     label: "Faint Blurple",
   },
   {
@@ -445,57 +452,68 @@ const knob_options = [
 ];
 
 const dict = {
-  Case_Black: "https://i.imgur.com/iecSXjO.png",
-  Case_BlushPink: "https://i.imgur.com/pEUI8eZ.png",
-  Case_CoolGrey: "https://i.imgur.com/id3AhEG.png",
-  Case_CyberYellow: "https://i.imgur.com/zj8zkmQ.png",
-  Case_FaintBlurple: "https://i.imgur.com/YGfOCtm.png",
-  Case_GTSilver: "https://i.imgur.com/lSEQnX1.png",
-  Case_IvoryCream: "https://i.imgur.com/lMcwWak.png",
-  Case_Lilac: "https://i.imgur.com/USISzee.png",
-  Case_Navy: "https://i.imgur.com/QLQVtJS.png",
-  Case_ScarletRed: "https://i.imgur.com/wboSoD7.png",
-  Case_SkyBlue: "https://i.imgur.com/ktxYbo5.png",
-  Case_Teal: "https://i.imgur.com/AKivXzO.png",
-  Case_White: "https://i.imgur.com/2sfAtUJ.png",
-  Case_WildGreen: "https://i.imgur.com/JyN3bFb.png",
+  Case_Black: "src/assets/Case/Zoom65v2_Case_Black.png",
+  Case_BlushPink: "src/assets/Case/Zoom65v2_Case_BlushPink.png",
+  Case_CoolGrey: "src/assets/Case/Zoom65v2_Case_CoolGrey.png",
+  Case_CyberYellow: "src/assets/Case/Zoom65v2_Case_CyberYellow.png",
+  Case_FaintBlurple: "src/assets/Case/Zoom65v2_Case_FaintBlurple.png",
+  Case_GTSilver: "src/assets/Case/Zoom65v2_Case_GTSilver.png",
+  Case_IvoryCream: "src/assets/Case/Zoom65v2_Case_IvoryCream.png",
+  Case_Lilac: "src/assets/Case/Zoom65v2_Case_Lilac.png",
+  Case_Navy: "src/assets/Case/Zoom65v2_Case_Navy.png",
+  Case_ScarletRed: "src/assets/Case/Zoom65v2_Case_ScarletRed.png",
+  Case_SkyBlue: "src/assets/Case/Zoom65v2_Case_SkyBlue.png",
+  Case_Teal: "src/assets/Case/Zoom65v2_Case_Teal.png",
+  Case_White: "src/assets/Case/Zoom65v2_Case_White.png",
+  Case_WildGreen: "src/assets/Case/Zoom65v2_Case_WildGreen.png",
 
-  Knob_Ano_Black: "https://i.imgur.com/qsZW1Nd.png",
-  Knob_Ano_Gold: "https://i.imgur.com/Zq709lw.png",
-  Knob_Ano_Pink: "https://i.imgur.com/Y7xKU5U.png",
-  Knob_Ano_RoseGold: "https://i.imgur.com/gzrRvxR.png",
-  Knob_PVD_Black: "https://i.imgur.com/LabwR6r.png",
-  Knob_PVD_Gold: "https://i.imgur.com/jMvDsyV.png",
-  Knob_PVD_Prism: "https://i.imgur.com/okDMca2.png",
-  Knob_PVD_Silver: "https://i.imgur.com/TsDTbTn.png",
-  Knob_Red: "https://i.imgur.com/fbB2dgt.png",
-  Knob_White: "https://i.imgur.com/9UEWzJU.png",
-  Knob_Yellow: "https://i.imgur.com/PxLfITA.png",
+  Knob_Ano_Black: "src/assets/Knob/Zoom65v2_Knob_Ano_Black.png",
+  Knob_Ano_Gold: "src/assets/Knob/Zoom65v2_Knob_Ano_Gold.png",
+  Knob_Ano_Pink: "src/assets/Knob/Zoom65v2_Knob_Ano_Pink.png",
+  Knob_Ano_RoseGold: "src/assets/Knob/Zoom65v2_Knob_Ano_RoseGold.png",
+  Knob_PVD_Black: "src/assets/Knob/Zoom65v2_Knob_PVD_Black.png",
+  Knob_PVD_Gold: "src/assets/Knob/Zoom65v2_Knob_PVD_Gold.png",
+  Knob_PVD_Prism: "src/assets/Knob/Zoom65v2_Knob_PVD_Prism.png",
+  Knob_PVD_Silver: "src/assets/Knob/Zoom65v2_Knob_PVD_Silver.png",
+  Knob_Red: "src/assets/Knob/Zoom65v2_Knob_Red.png",
+  Knob_White: "src/assets/Knob/Zoom65v2_Knob_White.png",
+  Knob_Yellow: "src/assets/Knob/Zoom65v2_Knob_Yellow.png",
 
-  Weight_Ano_Black: "https://i.imgur.com/f1y45hk.png",
-  Weight_Ano_Gold: "https://i.imgur.com/8Vw2qU8.png",
-  Weight_Ano_Pink: "https://i.imgur.com/YIER4HD.png",
-  Weight_Ano_RoseGold: "https://i.imgur.com/tiXmQ63.png",
-  Weight_eWhite: "https://i.imgur.com/gmc9Zjo.png",
-  Weight_PVD_Black: "https://i.imgur.com/5bd6o93.png",
-  Weight_PVD_Gold: "https://i.imgur.com/KGlO1CZ.png",
-  Weight_PVD_Prism: "https://i.imgur.com/NUpkHIw.png",
-  Weight_PVD_Silver: "https://i.imgur.com/OiNWq8N.png",
+  Weight_Ano_Black: "src/assets/Weight/Zoom65v2_Weight_Ano_Black.png",
+  Weight_Ano_Gold: "src/assets/Weight/Zoom65v2_Weight_Ano_Gold.png",
+  Weight_Ano_Pink: "src/assets/Weight/Zoom65v2_Weight_Ano_Pink.png",
+  Weight_Ano_RoseGold: "src/assets/Weight/Zoom65v2_Weight_Ano_RoseGold.png",
+  Weight_eWhite: "src/assets/Weight/Zoom65v2_Weight_eWhite.png",
+  Weight_PVD_Black: "src/assets/Weight/Zoom65v2_Weight_PVD_Black.png",
+  Weight_PVD_Gold: "src/assets/Weight/Zoom65v2_Weight_PVD_Gold.png",
+  Weight_PVD_Prism: "src/assets/Weight/Zoom65v2_Weight_PVD_Prism.png",
+  Weight_PVD_Silver: "src/assets/Weight/Zoom65v2_Weight_PVD_Silver.png",
 
-  Backplate_CF: "https://i.imgur.com/f75rmWo.png",
-  Backplate_Glass_BlushPink: "https://i.imgur.com/RAVZBto.png",
-  Backplate_Glass_CoolGrey: "https://i.imgur.com/xGX3BbP.png",
-  Backplate_Glass_FaintBlurple: "https://i.imgur.com/Km8ENTh.png",
-  Backplate_Glass_Lilac: "https://i.imgur.com/L3LNAft.png",
-  Backplate_Glass_MilkyGreen: "https://i.imgur.com/ZhZOnza.png",
-  Backplate_Glass_Navy: "https://i.imgur.com/7SWyDsN.png",
-  Backplate_Glass_ScarletRed: "https://i.imgur.com/yRMLnpK.png",
-  Backplate_Glass_SkyBlue: "https://i.imgur.com/Hv4WBiz.png",
-  Backplate_Glass_Teal: "https://i.imgur.com/ylQWRVw.png",
-  Backplate_Glass_WildGreen: "https://i.imgur.com/jjvzA9J.png",
-  Backplate_PVD_Black: "https://i.imgur.com/drTyCeT.png",
-  Backplate_PVD_Gold: "https://i.imgur.com/Uq4IxKg.png",
-  Backplate_PVD_Silver: "https://i.imgur.com/Nlta3f6.png",
+  Backplate_CF: "src/assets/Backplate/Zoom65v2_Backplate_CF.png",
+  Backplate_Glass_BlushPink:
+    "src/assets/Backplate/Zoom65v2_Backplate_Glass_BlushPink.png",
+  Backplate_Glass_CoolGrey:
+    "src/assets/Backplate/Zoom65v2_Backplate_Glass_CoolGrey.png",
+  Backplate_Glass_FaintBlurple:
+    "src/assets/Backplate/Zoom65v2_Backplate_Glass_FaintBlurple.png",
+  Backplate_Glass_Lilac:
+    "src/assets/Backplate/Zoom65v2_Backplate_Glass_Lilac.png",
+  Backplate_Glass_MilkyGreen:
+    "src/assets/Backplate/Zoom65v2_Backplate_Glass_MilkyGreen.png",
+  Backplate_Glass_Navy:
+    "src/assets/Backplate/Zoom65v2_Backplate_Glass_Navy.png",
+  Backplate_Glass_ScarletRed:
+    "src/assets/Backplate/Zoom65v2_Backplate_Glass_ScarletRed.png",
+  Backplate_Glass_SkyBlue:
+    "src/assets/Backplate/Zoom65v2_Backplate_Glass_SkyBlue.png",
+  Backplate_Glass_Teal:
+    "src/assets/Backplate/Zoom65v2_Backplate_Glass_Teal.png",
+  Backplate_Glass_WildGreen:
+    "src/assets/Backplate/Zoom65v2_Backplate_Glass_WildGreen.png",
+  Backplate_PVD_Black: "src/assets/Backplate/Zoom65v2_Backplate_PVD_Black.png",
+  Backplate_PVD_Gold: "src/assets/Backplate/Zoom65v2_Backplate_PVD_Gold.png",
+  Backplate_PVD_Silver:
+    "src/assets/Backplate/Zoom65v2_Backplate_PVD_Silver.png",
 };
 
 const default_dict = {
