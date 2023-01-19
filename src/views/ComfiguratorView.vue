@@ -222,8 +222,8 @@
           </p>
           &nbsp;&nbsp;• 14 case colors <br />
           &nbsp;&nbsp;• 14 bottom plate colors <br />
-          &nbsp;&nbsp;• 9 knob & weight combo <br />
-          &nbsp;&nbsp;• 11 External weights
+          &nbsp;&nbsp;• 11 knobs <br />
+          &nbsp;&nbsp;• 9 external weights
         </div>
       </el-col>
       <el-col :span="4"></el-col>
