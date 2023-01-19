@@ -31,7 +31,7 @@
       <el-col :span="3"></el-col>
     </el-row>
   </div>
-  <div v-if="flag" style="padding: 18px 0 30px 0">
+  <div v-if="flag" style="padding: 18px 0 25px 0">
     <el-row :gutter="20" class="row-bg" justify="center">
       <el-col class="select-el-col" :span="4">
         <div class="div_center">
@@ -127,7 +127,7 @@
       ></el-col>
     </el-row>
   </div>
-  <div v-else style="padding: 20px 0 0 0">
+  <div v-else style="padding: 5px 0 5px 0">
     <div class="select-el-col">
       <div class="div_center">
         <h4 class="select-tilte" style="text-align: center">Case Color</h4>
@@ -204,6 +204,30 @@
         </el-select>
       </div>
     </div>
+  </div>
+  <div>
+    <el-row :gutter="20">
+      <el-col :span="4"></el-col>
+      <el-col :span="16">
+        <div class="select-tilte">
+          <p style="font-size: 20px; padding-bottom: 10px">
+            126 Default combinations
+          </p>
+          &nbsp;&nbsp;• 14 case and backplate combos (the same color) <br />
+          &nbsp;&nbsp;• 9 knob & weight combos (the same color) <br />
+          You can choose up to 126 color ways as your default keyboard kit.
+          <br />
+          <p style="font-size: 20px; padding-top: 10px; padding-bottom: 10px">
+            19404 DIY combinations
+          </p>
+          &nbsp;&nbsp;• 14 case colors <br />
+          &nbsp;&nbsp;• 14 bottom plate colors <br />
+          &nbsp;&nbsp;• 9 knob & weight combo <br />
+          &nbsp;&nbsp;• 11 External weights
+        </div>
+      </el-col>
+      <el-col :span="4"></el-col>
+    </el-row>
   </div>
 </template>
 
