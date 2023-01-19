@@ -237,27 +237,24 @@ import { useImgStore } from "@/stores/img";
 const Img = useImgStore();
 const flag = ref(window.screen.width < 1100 ? false : true);
 const case_color = ref("Ivory Cream");
-const backplate_color = ref("PVD Silver");
+const backplate_color = ref("Glass Cream");
 const weight_color = ref("Anodized Gold");
 const knob_color = ref("Anodized Gold");
-
 window.onload = () => {
-  case_color.value = "Ivory Cream";
+  Img.case = "./Case/Zoom65v2_Case_IvoryCream.png";
+  Img.knob = "./Knob/Zoom65v2_Knob_Ano_Gold.png";
+  Img.weight = "./Weight/Zoom65v2_Weight_Ano_Gold.png";
+  Img.backplate = "./Backplate/Zoom65v2_Backplate_Glass_Cream.png";
 };
 
-Img.case = "https://i.imgur.com/lMcwWak.png";
-Img.knob = "https://i.imgur.com/Zq709lw.png";
-Img.weight = "https://i.imgur.com/8Vw2qU8.png";
-Img.backplate = "https://i.imgur.com/Nlta3f6.png";
-
 const update_case = () => {
-  console.log(case_color.value);
   Img.case = dict[case_color.value];
   Img.backplate = dict[default_dict[case_color.value]["backplate"]];
   Img.weight = dict[default_dict[case_color.value]["weight"]];
   Img.knob = dict[default_dict[case_color.value]["knob"]];
-
-  console.log(Img.case);
+  backplate_color.value = default_dict[case_color.value]["backplate"];
+  weight_color.value = default_dict[case_color.value]["weight"];
+  knob_color.value = default_dict[case_color.value]["knob"];
 };
 const update_backplate = () => {
   console.log(backplate_color.value);
@@ -364,8 +361,8 @@ const backplate_options = [
     label: "Glass Lilac",
   },
   {
-    value: "Backplate_Glass_MilkyGreen",
-    label: "Glass Milky Green",
+    value: "Backplate_Glass_Cream",
+    label: "Glass Cream",
   },
   {
     value: "Backplate_Glass_Navy",
@@ -520,8 +517,7 @@ const dict = {
   Backplate_Glass_FaintBlurple:
     "./Backplate/Zoom65v2_Backplate_Glass_FaintBlurple.png",
   Backplate_Glass_Lilac: "./Backplate/Zoom65v2_Backplate_Glass_Lilac.png",
-  Backplate_Glass_MilkyGreen:
-    "./Backplate/Zoom65v2_Backplate_Glass_MilkyGreen.png",
+  Backplate_Glass_Cream: "./Backplate/Zoom65v2_Backplate_Glass_Cream.png",
   Backplate_Glass_Navy: "./Backplate/Zoom65v2_Backplate_Glass_Navy.png",
   Backplate_Glass_ScarletRed:
     "./Backplate/Zoom65v2_Backplate_Glass_ScarletRed.png",
@@ -546,7 +542,7 @@ const default_dict = {
     weight: "Weight_Ano_RoseGold",
   },
   Case_IvoryCream: {
-    backplate: "Backplate_PVD_Silver",
+    backplate: "Backplate_Glass_Cream",
     knob: "Knob_Ano_Gold",
     weight: "Weight_Ano_Gold",
   },
